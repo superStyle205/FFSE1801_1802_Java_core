@@ -15,8 +15,6 @@ public class QuanLySinhVien {
 		sinhVienArray = new SinhVien[MAX_LENGTH];
 		sc = new Scanner(System.in);
 	}
-	
-	public void doSomething() {}
 
 	public void themSinhVien() {
 		if (size == MAX_LENGTH) {
