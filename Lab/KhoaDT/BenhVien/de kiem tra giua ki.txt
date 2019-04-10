@@ -1,0 +1,38 @@
+quan ly ho so benh vien(ho so benh nhan va ho so nhan vien):
++ Thong tin benh nhan:
+	- Ten
+	- Tuoi
+	- Gioi tinh
+	- cmnd
+	- ma benh nhan
+	- Benh
+	- Phuong phap chua benh
+	- Ngay nhap vien
+	- Ngay ra vien
+	- Tien thanh toan
++ Thong tin bac sy:
+	- Ten
+	- Tuoi
+	- Gioi tinh
+	- cmnd
+	- ma bac sy
+	- Khoa
+	- ngay bat dau vao lam
+	- Luong
+	- Phu cap
+	
+Cac tinh nang:
+Benh nhan
+1/ Thêm mới hồ sơ bệnh nhân
+2/ Hiển thị thông tin tất cả bệnh nhân
+3/ Hiển thị hồ sơ của bệnh nhân với mã bệnh nhân nhập từ bàn phím
+4/ Tính tổng các số tiền của tất cả bệnh nhân
+5/ Tìm bệnh nhân có tiền trả nhiều nhất
+6/ TÌm các bệnh nhân có bệnh tương ứng nhập từ bàn phím
+
+NhanVien
+7/ Thêm mới nhân viên
+8/ Hiển thị tất cả bác sỹ
+9/ Hiển thị bác sỹ với khoa tương ứng nhập từ bàn phím
+10/ Sửa phụ cấp cho bác sỹ tương ứng với mã bác sỹ nhập từ bàn phím
+11/ Xóa bác sỹ với mã tương ứng
