@@ -1,4 +1,4 @@
-
+package Assignment4;
 import java.util.Scanner;
 
 public class RunKH extends MainKH{
