@@ -1,11 +1,11 @@
 package benhvien;
 
-import java.util.Date;
+
 
 public class BenhNhan {
-String ten,gioitinh,benh,phuongphap;
+String ten,gioitinh,benh,phuongphap,ngaynhap,ngayra;
 int tuoi,cmnd,mabenhnhan,tienthanhtoan;
-Date ngaynhap,ngayra;
+
 public String getTen() {
 	return ten;
 }
@@ -54,16 +54,16 @@ public int getTienthanhtoan() {
 public void setTienthanhtoan(int tienthanhtoan) {
 	this.tienthanhtoan = tienthanhtoan;
 }
-public Date getNgaynhap() {
+public String getNgaynhap() {
 	return ngaynhap;
 }
-public void setNgaynhap(Date ngaynhap) {
+public void setNgaynhap(String ngaynhap) {
 	this.ngaynhap = ngaynhap;
 }
-public Date getNgayra() {
+public String getNgayra() {
 	return ngayra;
 }
-public void setNgayra(Date ngayra) {
+public void setNgayra(String ngayra) {
 	this.ngayra = ngayra;
 }
 
