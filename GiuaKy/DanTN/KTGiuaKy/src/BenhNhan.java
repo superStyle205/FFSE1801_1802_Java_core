@@ -1,4 +1,4 @@
-﻿public class BenhNhan{
+﻿public class BenhNhan {
 	private String ten;
 	private String gioiTinh;
 	private String maBenhNhan;
@@ -9,64 +9,84 @@
 	private double tuoi;
 	private double cmnd;
 	private double tienThanhToan;
-	public String getTen(){
+
+	public String getTen() {
 		return ten;
 	}
-	public void setTen(String ten){
+
+	public void setTen(String ten) {
 		this.ten = ten;
 	}
-	public String getGioiTinh(){
+
+	public String getGioiTinh() {
 		return gioiTinh;
 	}
-	public void setGioiTinh(String gioiTinh){
+
+	public void setGioiTinh(String gioiTinh) {
 		this.gioiTinh = gioiTinh;
 	}
-	public String getMaBenhNhan(){
+
+	public String getMaBenhNhan() {
 		return maBenhNhan;
 	}
-	public void setMaBenhNhan(String maBenhNhan){
+
+	public void setMaBenhNhan(String maBenhNhan) {
 		this.maBenhNhan = maBenhNhan;
 	}
-	public String getBenh(){
+
+	public String getBenh() {
 		return benh;
 	}
-	public void setBenh(String benh){
+
+	public void setBenh(String benh) {
 		this.benh = benh;
 	}
-	public String getPhuongPhapChuaBenh(){
+
+	public String getPhuongPhapChuaBenh() {
 		return phuongPhapChuaBenh;
 	}
-	public void setPhuongPhapChuaBenh(String phuongPhapChuaBenh){
+
+	public void setPhuongPhapChuaBenh(String phuongPhapChuaBenh) {
 		this.phuongPhapChuaBenh = phuongPhapChuaBenh;
 	}
-	public String getNgayNhapVien(){
+
+	public String getNgayNhapVien() {
 		return ngayNhapVien;
 	}
-	public void setNgayNhapVien(String ngayNhapVien){
+
+	public void setNgayNhapVien(String ngayNhapVien) {
 		this.ngayNhapVien = ngayNhapVien;
 	}
-	public String getNgayRaVien(){
+
+	public String getNgayRaVien() {
 		return ngayRaVien;
 	}
-	public void setNgayRaVien(String ngayRaVien){
+
+	public void setNgayRaVien(String ngayRaVien) {
 		this.ngayRaVien = ngayRaVien;
 	}
-	public double getTuoi(){
+
+	public double getTuoi() {
 		return tuoi;
 	}
-	public void setTuoi(double tuoi){
+
+	public void setTuoi(double tuoi) {
 		this.tuoi = tuoi;
 	}
-	public double getCMND(){
+
+	public double getCMND() {
 		return cmnd;
 	}
-	public void setCMND(double cmnd){
+
+	public void setCMND(double cmnd) {
 		this.cmnd = cmnd;
 	}
-	public double getTienThanhToan(){
+
+	public double getTienThanhToan() {
 		return tienThanhToan;
 	}
-	public void setTienThanhToan(double tienThanhToan){
+
+	public void setTienThanhToan(double tienThanhToan) {
 		this.tienThanhToan = tienThanhToan;
 	}
 }
