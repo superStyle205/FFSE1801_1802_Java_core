@@ -1,12 +1,11 @@
 package benhvien;
 
 
-import java.sql.Date;
 
 public class BacSi {
-String ten,gioitinh,khoa;
+String ten,gioitinh,khoa,ngayvaolam;
 int tuoi,cmnd,mabacsi,luong,phucap;
-Date ngayvaolam;
+
 public String getTen() {
 	return ten;
 }
@@ -55,10 +54,10 @@ public int getPhucap() {
 public void setPhucap(int phucap) {
 	this.phucap = phucap;
 }
-public Date getNgayvaolam() {
+public String getNgayvaolam() {
 	return ngayvaolam;
 }
-public void setNgayvaolam(Date ngayvaolam) {
+public void setNgayvaolam(String ngayvaolam) {
 	this.ngayvaolam = ngayvaolam;
 }
 
