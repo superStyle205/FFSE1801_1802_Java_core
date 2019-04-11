@@ -41,7 +41,7 @@ public class QuanLySV {
 				hienThiSinhVien();
 				break;
 			case 0:
-				break;
+				System.exit(0);
 			default:
 				System.out.println("Lỗi!! Vui lòng chọn lại");
 			}
@@ -139,7 +139,10 @@ public class QuanLySV {
 			System.out.println();
 		}
 	}
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		QuanLySV ql = new QuanLySV();
 		ql.menu();
