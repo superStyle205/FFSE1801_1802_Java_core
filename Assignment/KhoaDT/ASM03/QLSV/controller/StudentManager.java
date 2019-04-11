@@ -6,12 +6,9 @@ import QLSV.model.Database;
 
 import java.awt.*;
 
-//import static QLSV.MainQLSV.database1;
-
 public class StudentManager {
 
     private MenuView manageStudentView=new MenuView();;
-//    private Database database =new Database() ;
     Student student1=new Student("1","Khoa",23,"Nguyen thien ke",3.52);
     Student student2=new Student("2","Viet",18,"Le Duan",4.0);
     Student student3=new Student("3","Luong",25,"Ngo Quyen",3);
@@ -36,7 +33,6 @@ public class StudentManager {
                     int len=database1.getSize();
                     System.out.println(len);
                     Student[] studentTempArr=database1.list();
-//                    manageStudentView.listView(studentTempArr[0],0);
                     for (int i=0;i<len;i++){
                         manageStudentView.listView(studentTempArr[i],i);
                     }
@@ -79,7 +75,6 @@ public class StudentManager {
                     break;
                 default:
                     manageStudentView.message("Vui lòng chọn hành động từ menu.");
-//                    input=manageStudentView.getInput();
             }
             manageStudentView.message("Chọn hành động tiếp theo");
             input=manageStudentView.getInput();
