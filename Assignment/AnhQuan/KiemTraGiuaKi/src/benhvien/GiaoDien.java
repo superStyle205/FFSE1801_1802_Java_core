@@ -7,8 +7,10 @@ public static void main(String[] args) {
 	HamGoi hg= new HamGoi();
 	hg.giaoDien();
 Scanner sc = new Scanner(System.in);
+while (true) {
 int roll = sc.nextInt();
-
+hg.giaoDien();
+	
 switch(roll){
 	case 1: 
 		hg.themmoibn();
@@ -37,10 +39,12 @@ switch(roll){
 	case 9:
 		hg.timbacsitheokhoa();
 		break;
+		default: System.out.println("ko hop le");
+		
 }
 }
 
-
+}
 	
 
 }
