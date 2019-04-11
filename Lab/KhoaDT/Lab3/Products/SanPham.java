@@ -71,10 +71,8 @@ public class SanPham {
     public static void main(String[] args) {
         while (conti()){
             SanPham sanPham1=new SanPham("Vinamilk",12345,123);
-//            sanPham1.input();
             sanPham1.output();
             SanPham sanPham2=new SanPham("Ovaltine",12345);
-//            sanPham2.input();
             sanPham2.output();
         }
     }

@@ -95,10 +95,10 @@ public class MainFPT {
     }
     public static void getStudent(StudentFPT student,int index){
             if (student.getMajor().equals("IT")){
-                System.out.println("Sinh viÃªn thá»© "+(index+1)+": TÃªn: "+student.getName()+" - NgÃ nh: "+student.getMajor()+" - Java: "+((StudentIT)student).getDiemJava()+" - HTML: "+((StudentIT)student).getDiemHTML()+" - CSS: "+((StudentIT)student).getDiemHTML()+" - Hoc luc: "+student.getHocLuc());
+                System.out.println("Sinh vien thu "+(index+1)+": Ten: "+student.getName()+" - Nganh: "+student.getMajor()+" - Java: "+((StudentIT)student).getDiemJava()+" - HTML: "+((StudentIT)student).getDiemHTML()+" - CSS: "+((StudentIT)student).getDiemHTML()+" - Hoc luc: "+student.getHocLuc());
             }
             else {
-                System.out.println("Sinh viÃªn thá»© "+(index+1)+": TÃªn: "+student.getName()+" - NgÃ nh: "+student.getMajor()+" - Marketing: "+((StudentBiz)student).getDiemMarketing()+" - Sales: "+((StudentBiz)student).getDiemSales()+" - Hoc luc: "+student.getHocLuc());
+                System.out.println("Sinh vien thu "+(index+1)+": Ten: "+student.getName()+" - Nganh: "+student.getMajor()+" - Marketing: "+((StudentBiz)student).getDiemMarketing()+" - Sales: "+((StudentBiz)student).getDiemSales()+" - Hoc luc: "+student.getHocLuc());
             }
 
     }

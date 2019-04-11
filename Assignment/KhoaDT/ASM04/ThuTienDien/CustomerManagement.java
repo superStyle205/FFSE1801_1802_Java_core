@@ -14,10 +14,6 @@ public class CustomerManagement{
 
     public ChuHo addChuHo(){
         ChuHo chuHo;
-//        if (size>100-1){
-//            System.out.println("Vuot qua so luong khach hang");
-//            return null;
-//        } else {
             System.out.println("Nhap ten khach hang:");
             String name= scanner.nextLine();
             System.out.println("Nhap dia chi khach hang:");
