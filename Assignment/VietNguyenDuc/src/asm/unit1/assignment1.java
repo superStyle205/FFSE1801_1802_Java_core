@@ -13,7 +13,7 @@ public class assignment1 {
 
     public static void main(String ... args){
         task1();
-
+        task2();
     }
 
     public static void task1(){
@@ -57,6 +57,8 @@ System.out.println(ANSI_BLACK+"_________$$$$$$$$_______$$$$$$$$\n" +
         "____________________$\n"+ANSI_BLACK);
     }
     public static void task2(){
-
+        System.out.println("So sánh 10 và 2 số nào nhỏ nhất:"+ Math.min(10,2));
+        System.out.println("So sánh 15 và 7 số nào lớn nhất:"+ Math.max(15,7));
+        System.out.println("Tính 6 lũy thừ 7:"+ Math.pow(6,7));
     }
 }
