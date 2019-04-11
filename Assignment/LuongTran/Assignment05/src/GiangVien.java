@@ -21,9 +21,27 @@ public class GiangVien extends CanBo{
 	public void setSoTietDayTrongThang(int soTietDayTrongThang) {
 		this.soTietDayTrongThang = soTietDayTrongThang;
 	}
+	
 	public GiangVien() {
 		
 	}
+	
+	public void setPhuCap() {
+		if(getTrinhDo().equals("cử nhân")) {
+			super.setPhuCap(300);;
+		}
+		if(getTrinhDo().equals("thạc sĩ")) {
+			super.setPhuCap(500);
+		}
+		if(getTrinhDo().equals("tiến sĩ")) {
+			super.setPhuCap(1000);
+		}
+	}
+	@Override
+	public double getLuong() {
+		return (getHeSoLuong()*730 + getPhuCap() + soTietDayTrongThang*45);
+	}
+	
 	public GiangVien(String ten, double phuCap, double heSoLuong, String khoa, String trinhDo,
 			int soTietDayTrongThang) {
 		super(ten, phuCap, heSoLuong);

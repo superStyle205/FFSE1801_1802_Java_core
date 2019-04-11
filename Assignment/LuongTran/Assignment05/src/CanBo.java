@@ -19,12 +19,15 @@ public class CanBo {
 	public double getPhuCap() {
 		return phuCap;
 	}
-	public void setPhuCap(double phuCap) {
+	protected void setPhuCap(double phuCap) {
 		this.phuCap = phuCap;
 	}
 	
 	public CanBo() {
 		
+	}
+	public double getLuong() {
+		return 0;
 	}
 	public CanBo(String ten, double phuCap, double heSoLuong) {
 		super();
