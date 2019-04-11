@@ -1,4 +1,4 @@
-﻿public class BacSy{
+﻿public class BacSy {
 	private String ten;
 	private String gioiTinh;
 	private String maBacSy;
@@ -8,58 +8,76 @@
 	private double cmnd;
 	private double luong;
 	private double phuCap;
-	public String getTen(){
+
+	public String getTen() {
 		return ten;
 	}
-	public void setTen(String ten){
+
+	public void setTen(String ten) {
 		this.ten = ten;
 	}
-	public String getGioiTinh(){
+
+	public String getGioiTinh() {
 		return gioiTinh;
 	}
-	public void setGioiTinh(String gioiTinh){
+
+	public void setGioiTinh(String gioiTinh) {
 		this.gioiTinh = gioiTinh;
 	}
-	public String getMaBacSy(){
+
+	public String getMaBacSy() {
 		return maBacSy;
 	}
-	public void setMaBacSy(String maBacSy){
+
+	public void setMaBacSy(String maBacSy) {
 		this.maBacSy = maBacSy;
 	}
-	public String getKhoa(){
+
+	public String getKhoa() {
 		return khoa;
 	}
-	public void setKhoa(String khoa){
+
+	public void setKhoa(String khoa) {
 		this.khoa = khoa;
 	}
-	public String getNgayBatDauVaoLam(){
+
+	public String getNgayBatDauVaoLam() {
 		return ngayBatDauVaoLam;
 	}
-	public void setNgayBatDauVaoLam(String ngayBatDauVaoLam){
+
+	public void setNgayBatDauVaoLam(String ngayBatDauVaoLam) {
 		this.ngayBatDauVaoLam = ngayBatDauVaoLam;
 	}
-	public double getTuoi(){
+
+	public double getTuoi() {
 		return tuoi;
 	}
-	public void setTuoi(double tuoi){
+
+	public void setTuoi(double tuoi) {
 		this.tuoi = tuoi;
 	}
-	public double getCMND(){
+
+	public double getCMND() {
 		return cmnd;
 	}
-	public void setCMND(double cmnd){
+
+	public void setCMND(double cmnd) {
 		this.cmnd = cmnd;
 	}
-	public double getLuong(){
+
+	public double getLuong() {
 		return luong;
 	}
-	public void setLuong(double luong){
+
+	public void setLuong(double luong) {
 		this.luong = luong;
 	}
-	public double getPhuCap(){
+
+	public double getPhuCap() {
 		return phuCap;
 	}
-	public void setPhuCap(double phuCap){
+
+	public void setPhuCap(double phuCap) {
 		this.phuCap = phuCap;
 	}
 }
