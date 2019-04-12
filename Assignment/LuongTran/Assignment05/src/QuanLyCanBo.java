@@ -98,15 +98,16 @@ public class QuanLyCanBo {
 		
 		for(int i = 0; i < listCanBo.size(); i++) {
 			for(int j = i+1; j < listCanBo.size(); j++) {
-				if(listCanBo.get(i).getTen().compareTo(listCanBo.get(j).getTen())>0) {
-					canBoTmp = listCanBo.get(i);
-					listCanBo.set(i, listCanBo.get(j));
-					listCanBo.set(j, canBoTmp);
+				if(listCanBo.get(i).getLuong() == listCanBo.get(j).getLuong()) {
+					if(listCanBo.get(i).getTen().compareTo(listCanBo.get(j).getTen())>0) {
+						canBoTmp = listCanBo.get(i);
+						listCanBo.set(i, listCanBo.get(j));
+						listCanBo.set(j, canBoTmp);
+					}
 				}
 			}
 		}
 		return listCanBo;
-		
 	}
 	public void showGiangVien(ArrayList<GiangVien> list) {
 		for(GiangVien giangVien : list) {
