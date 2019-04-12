@@ -24,15 +24,22 @@ public class MainSinhVien extends SinhVien {
 		
 		boolean lap = true;
 		do {
+			System.out.println("1.Nhập danh sách họ và tên");
+			System.out.println("2.Xuất danh sách vừa nhập");
+			System.out.println("3.Xuất danh sách ngẫu nhiên");
+			System.out.println("4.Sắp xếp giảm dần và xuất danh sách");
+			System.out.println("5.Tìm và xóa họ tên nhập từ bàn phím");
+			System.out.println("6.Kết thúc");
+			
 			System.out.println("Chọn thao tác");
 			Scanner sc = new Scanner(System.in);
 			int soNhap = sc.nextInt();
 			switch (soNhap) {
 			case 1 : 
-				xuat(listSv);
+				themSv(listSv);
 				break;
 			case 2 : 
-				themSv(listSv);
+				xuat(listSv);
 				break;
 			case 3 : 
 				xuatNgauNhien(listSv);
