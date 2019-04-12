@@ -23,12 +23,11 @@ public class ASM02 {
             for (int i=0; i<=inputSegment;i++){
                 if (inputLength-(i+1)*9<0){
                     len=0;
-                } else {len=inputLength-(i+1)*9;}
+                } else {
+					len=inputLength-(i+1)*9;
+				}
 
                 inputArr[i]=input.substring(len,inputLength-i*9);
-//                System.out.println(inputArr[i]);
-//                System.out.println(inputSegment);
-
                 tempArray=inputArr[i].split("");
                 int strLen=tempArray.length;
                 int strDiv=strLen/3;
@@ -49,15 +48,12 @@ public class ASM02 {
                     for (int j=0;j<3;j++){
                         if (j+k*3+1>strLen){
                             stop=true;
-//                    System.out.println(j+k*3+1);
                             break;
                         } else {
                             segmentInt=reverseTempArray[j+k*3]+segmentInt;}
-//                    System.out.println(segmentInt);
                     }
                     if (segmentInt!=""){
                         if (Float.parseFloat(segmentInt)%100==0){
-//                    System.out.println(segmentInt);
                             if (Float.parseFloat(segmentInt)%1000==0){
                                 segmentStr="";
                             } else{segmentStr=arrV2[(int)Float.parseFloat(segmentInt)/100]+"trăm ";}
@@ -102,18 +98,14 @@ public class ASM02 {
                     }
                     if (stop==true){
                         break;}
-//            System.out.println(result);
                 }
                 inputArr[i]=result;
-//                System.out.println(result);
-
             }
             for (int i=inputSegment; i>=0;i--){
                 if (i==inputSegment){
                     bil="";
                 } else {bil="tỷ ";}
                 System.out.print(bil+inputArr[i]);
-//                System.out.println(i);
             }
 
         }

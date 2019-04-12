@@ -40,7 +40,6 @@ public class Database {
 
     }
     public int findId(String id){
-//        Student studentTemp=new Student();
         for (int i=0;i<size;i++){
             if (studentArr[i].getId().equals(id)){
                 return i;

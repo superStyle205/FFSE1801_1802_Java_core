@@ -21,9 +21,7 @@ public class KhachSan {
     }
 
     public void nhapThongTin(){
-//        System.out.println("Nhap thong tin khach hang");
         Nguoi khachHang=new Nguoi();
-//        khachHang.nhapThongTin();
         setKhachHang(khachHang);
         System.out.println("Nhap so ngay tro");
         setSoNgayTro(Integer.parseInt(scanner.nextLine()));
@@ -81,8 +79,6 @@ public class KhachSan {
             case "3":
                 this.loaiPhong="Phong re";
                 break;
-//            default:
-//                System.out.println("Vui long chon loai phong tu danh sach");
         }
     }
 

@@ -16,9 +16,6 @@ public class MenuView {
     Pattern pattern2 = Pattern.compile(regexInteger);
     Matcher matcher;
 
-
-//    private Student studentTemp=new Student();
-
     public MenuView() {
     }
 
@@ -38,11 +35,6 @@ public class MenuView {
         input=(scanner.nextLine());
         return input;
     }
-
-//    public Student getStudent(){
-//        Student studentTemp = new Student(getIdView(),nameView(), ageView(),addressView(),gpaView());
-//        return studentTemp;
-//    }
 
     public String getIdView(){
         String ID;
