@@ -1,4 +1,4 @@
-package views;
+﻿package views;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 import model.BacSy;
 import model.BenhNhan;
-import model.Person;
+
 
 public class PersonViews {
 	
 	Scanner sc =new Scanner(System.in);
-	
-	
+	private int maBN=0;
+	private int maBS=0;
 	public BenhNhan addBenhNhanView() {
 		System.out.println("Mời ban nhập tên");
 		String ten = sc.nextLine();
@@ -25,8 +25,8 @@ public class PersonViews {
 		String sex = choseSex();
 		System.out.println("Mời ban nhập CMND");
 		String cmnd = sc.nextLine();
-		System.out.println("Mời ban nhập Ma bệnh nhân");
-		String maBenhNhan = sc.nextLine();
+		//mã bệnh nhân tự tăng
+		String maBenhNhan = maBenhNhan(maBN++);
 		System.out.println("Mời ban nhập bệnh");
 		String benh =sc.nextLine();
 		System.out.println("Mời ban nhập phương pháp");
@@ -52,8 +52,7 @@ public class PersonViews {
 		String sex = choseSex();
 		System.out.println("Mời ban nhập CMND");
 		String cmnd = sc.nextLine();
-		System.out.println("Mời ban nhập Ma bác sỹ");
-		String maBacSy = sc.nextLine();
+		String maBacSy = maBacSy(maBS++);
 		System.out.println("Mời ban nhập khoa");
 		String khoa =sc.nextLine();
 		System.out.println("Mời ban nhập ngày vào làm dd/MM/yyy");
@@ -64,6 +63,26 @@ public class PersonViews {
 		System.out.println("Mời ban nhập lương");
 		double luong = Double.parseDouble(sc.nextLine());
 		return new BacSy(ten, age, sex, cmnd, maBacSy, khoa, ngayVaoLam, luong, phuCap);
+	}
+	
+	private String maBenhNhan(int i) {
+		String ma ;
+		if(i<10) {
+			ma= "BN0"+i;
+		}else {
+			ma="BN"+i;
+		}
+		return ma;
+	}
+	
+	private String maBacSy(int i) {
+		String ma ;
+		if(i<10) {
+			ma= "BS0"+i;
+		}else {
+			ma="BS"+i;
+		}
+		return ma;
 	}
 	
 	private String choseSex() {
