@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class QLCB {
-    ArrayList<NhanVien> dsGiangVien=new ArrayList<>();
-    ArrayList<NhanVien> dsNhanVienHC=new ArrayList<>();
+    ArrayList<NhanVien> dsNhanViens=new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
     public void addGV(){
@@ -23,7 +22,7 @@ public class QLCB {
         System.out.println("Nhap so lop trong tuan:");
         int classes=Integer.parseInt(scanner.nextLine());
         GiangVien giangVien=new GiangVien(name,salary,department,level,classes);
-        dsGiangVien.add(giangVien);
+        dsNhanViens.add(giangVien);
     }
 
     public void addNV(){
@@ -41,7 +40,7 @@ public class QLCB {
         System.out.println("Nhap so ngay cong trong thang:");
         int workDays=Integer.parseInt(scanner.nextLine());
         GiangVien giangVien=new GiangVien(name,salary,department,pos,workDays);
-        dsGiangVien.add(giangVien);
+        dsNhanViens.add(giangVien);
     }
 
     public void showGiangVienInfo(GiangVien giangVien){
@@ -79,26 +78,30 @@ public class QLCB {
     }
 
     public void showListGiangVien(String department){
-        if (dsGiangVien.size()==0){
+        if (dsNhanViens.size()==0){
             System.out.println("Du lieu khong co");
         } else {
-            for (NhanVien giangVien : dsGiangVien){
-                if (((GiangVien)giangVien).getDepartment().toUpperCase().equals(department.toUpperCase())){
-                    showGiangVienInfo((GiangVien)giangVien);
-                    System.out.println();
+            for (NhanVien giangVien : dsNhanViens){
+                if (giangVien instanceof GiangVien){
+                    if (((GiangVien)giangVien).getDepartment().toUpperCase().equals(department.toUpperCase())){
+                        showGiangVienInfo((GiangVien)giangVien);
+                        System.out.println();
+                    }
                 }
             }
         }
     }
 
     public void showListNhanVien(String department){
-        if (dsNhanVienHC.size()==0){
+        if (dsNhanViens.size()==0){
             System.out.println("Du lieu khong co");
         } else {
-            for (NhanVien nhanVienHC : dsNhanVienHC){
-                if (((NhanVienHC)nhanVienHC).getDepartment().toUpperCase().equals(department.toUpperCase())){
-                    showNhanVienHCInfo((NhanVienHC)nhanVienHC);
-                    System.out.println();
+            for (NhanVien nhanVienHC : dsNhanViens){
+                if (nhanVienHC instanceof NhanVien){
+                    if (((NhanVienHC)nhanVienHC).getDepartment().toUpperCase().equals(department.toUpperCase())){
+                        showNhanVienHCInfo((NhanVienHC)nhanVienHC);
+                        System.out.println();
+                    }
                 }
             }
         }
@@ -106,25 +109,43 @@ public class QLCB {
 
     public void totalSalary(){
         double totalSalary=0;
-        if (dsNhanVienHC.size()!=0){
-            for (NhanVien nhanVienHC : dsNhanVienHC){
-                totalSalary+=nhanVienHC.getSalary();
-            }
-        }
-        if (dsGiangVien.size()!=0){
-            for (NhanVien giangVien : dsGiangVien){
-                totalSalary+=giangVien.getSalary();
+        if (dsNhanViens.size()!=0){
+            for (NhanVien nhanVien : dsNhanViens){
+                totalSalary+=nhanVien.getSalary();
             }
         }
         System.out.println("Tong luong cac nhan vien la:" + totalSalary);
     }
 
-    public void sortListGiangVien(){
+    public void sortListNhanVien(){
+        NhanVien nhanVienTmp;
+        for(int i = 0; i < dsNhanViens.size()-1; i++) {
+            for(int j = i+1; j < dsNhanViens.size(); j++) {
+                if(dsNhanViens.get(i).getSalary()>dsNhanViens.get(j).getSalary()) {
+                    nhanVienTmp=dsNhanViens.get(i);
+                    dsNhanViens.set(i,dsNhanViens.get(j));
+                    dsNhanViens.set(j,nhanVienTmp);
+                } else if (dsNhanViens.get(i).getSalary()==dsNhanViens.get(j).getSalary()) {
+                    if(dsNhanViens.get(i).getName().compareTo(dsNhanViens.get(j).getName())>0) {
+                        nhanVienTmp=dsNhanViens.get(i);
+                        dsNhanViens.set(i,dsNhanViens.get(j));
+                        dsNhanViens.set(j,nhanVienTmp);
+                    }
+                }
 
+            }
+        }
     }
 
-    public void sortListNhanVien(){
-
+    public void showAll(){
+        for (NhanVien nhanVien : dsNhanViens){
+            if (nhanVien instanceof NhanVienHC){
+                showNhanVienHCInfo((NhanVienHC)nhanVien);
+            } else {
+                showGiangVienInfo((GiangVien) nhanVien);
+            }
+            System.out.println();
+        }
     }
 
     public void menu(){
@@ -135,7 +156,7 @@ public class QLCB {
         System.out.println("4/ Xuat danh sach nhan vien theo phong ban");
         System.out.println("5/ Tinh tong luong truong phai tra");
         System.out.println("6/ Sap xep danh sach giang vien theo luong/ten");
-        System.out.println("7/ Sap xep danh sach nhan vien theo luong/ten");
+        System.out.println("7/ Hien thi tat ca can bo");
         System.out.println("8/ Thoat chuong trinh");
         while (true){
             switch(scanner.nextLine()){
@@ -157,10 +178,11 @@ public class QLCB {
                     totalSalary();
                     break;
                 case "6":
-                    sortListGiangVien();
+                    sortListNhanVien();
+                    showAll();
                     break;
                 case "7":
-                    sortListNhanVien();
+                    showAll();
                     break;
                 case "8":
                     System.exit(0);
@@ -178,11 +200,13 @@ public class QLCB {
         NhanVienHC nhanVien1=new NhanVienHC("An",2.8,"Dao tao","1",28);
         NhanVienHC nhanVien2=new NhanVienHC("Quan",1,"Tai vu","2",24);
         NhanVienHC nhanVien3=new NhanVienHC("Dan",1.5,"Tuyen sinh","3",26);
-        dsNhanVienHC.add(nhanVien1);
-        dsNhanVienHC.add(nhanVien2);
-        dsNhanVienHC.add(nhanVien3);
-        dsGiangVien.add(giangVien1);
-        dsGiangVien.add(giangVien2);
-        dsGiangVien.add(giangVien3);
+        NhanVienHC nhanVien4=new NhanVienHC("Bao",1.5,"Tuyen sinh","3",26);
+        dsNhanViens.add(nhanVien1);
+        dsNhanViens.add(nhanVien2);
+        dsNhanViens.add(nhanVien3);
+        dsNhanViens.add(nhanVien4);
+        dsNhanViens.add(giangVien1);
+        dsNhanViens.add(giangVien2);
+        dsNhanViens.add(giangVien3);
     }
 }
