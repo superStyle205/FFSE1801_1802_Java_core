@@ -1,4 +1,4 @@
-package quanLiTienDien.copy;
+package quanLiTienDien;
 
 public class KhachHang {
 	 private String hoTen;
@@ -49,9 +49,9 @@ public class KhachHang {
 
 
 	public void xuat() {
-		System.out.println("h·ª? ten: "+ hoTen);
-		System.out.println("h·ª? ten: "+ soNha);
-		System.out.println("h·ª? ten: "+ maSoCongToDien);
+		System.out.println("h·ªç ten: "+ hoTen);
+		System.out.println("h·ªç ten: "+ soNha);
+		System.out.println("h·ªç ten: "+ maSoCongToDien);
 	 }
 
  

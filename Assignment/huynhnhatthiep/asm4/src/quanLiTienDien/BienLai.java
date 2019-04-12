@@ -1,4 +1,4 @@
-package quanLiTienDien.copy;
+package quanLiTienDien;
 import java.util.Scanner;
 public class BienLai extends KhachHang {
 	private int chiSoCu;
@@ -34,7 +34,7 @@ public class BienLai extends KhachHang {
 		super.xuat();
 		System.out.println("chỉ số củ:  "+chiSoCu);
 		System.out.println("chỉ số mới: "+chiSoMoi);
-		System.out.println("S�? TIỀN CẦN THANH TO�?N:  "+ tien);
+		System.out.println("SỐ TIỀN CẦN THANH TOÁN:  "+ tien);
 		System.out.println("-----------------------------");
 	}
 }

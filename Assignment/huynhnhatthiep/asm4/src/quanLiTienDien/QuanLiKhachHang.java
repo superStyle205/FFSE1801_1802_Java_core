@@ -1,4 +1,4 @@
-package quanLiTienDien.copy;
+package quanLiTienDien;
  import java.util.Scanner;
 public class QuanLiKhachHang{
 	
