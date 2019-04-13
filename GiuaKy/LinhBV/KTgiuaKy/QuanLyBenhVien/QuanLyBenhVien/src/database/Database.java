@@ -1,4 +1,4 @@
-package database;
+﻿package database;
 
 
 import java.util.ArrayList;
@@ -135,12 +135,15 @@ public class Database {
 		}
 	}
 	
-	public void deleteBacSyFromMa(String findMa) {
+	public boolean deleteBacSyFromMa(String findMa) {
+		boolean check =true;
 		for(BacSy ds : arrBacSy) {
 			if(ds.getMaBacSy().equals(findMa)) {
 				arrBacSy.remove(ds);
+				check = false;
 			}
-		}
+		}	
+		return check;
 	}
 	
 }

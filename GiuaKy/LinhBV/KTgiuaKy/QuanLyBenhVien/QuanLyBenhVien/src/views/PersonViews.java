@@ -233,6 +233,12 @@ public class PersonViews {
 		return Integer.parseInt(sc.nextLine());
 	}
 
+	public void checkFindMa(boolean check) {
+		if(check) {
+			System.out.println("Ma not found");
+		}
+	}
+
 	public void exit() {
 		System.out.println("Bạn đã thoát");
 		System.exit(0);

@@ -69,7 +69,8 @@ public class Controller {
 					break;
 				case 11:
 					find =personViews.findBacSyFromMa();
-					database.deleteBacSyFromMa(find);
+					check =database.deleteBacSyFromMa(find);
+					personViews.checkFindMa(check);
 					break;
 				case 12:
 					personViews.exit();
