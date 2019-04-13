@@ -47,7 +47,7 @@ public class NhanVienHC extends NhanVien {
             super.setBonus(2000);
         } else if (pos.equals("2")){
             super.setBonus(1000);
-        } else {
+        } else if (pos.equals("3")){
             super.setBonus(500);
         }
         this.workDays = workDays;
