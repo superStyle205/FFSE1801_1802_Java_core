@@ -47,7 +47,7 @@ public class GiangVien extends NhanVien {
             super.setBonus(300);
         } else if (level.equals("2")){
             super.setBonus(500);
-        } else {
+        } else if (level.equals("3")){
             super.setBonus(1000);
         }
         this.classes = classes;
