@@ -39,7 +39,7 @@ public class QuanLyCanBo {
 	}
 
 	public void hienThiCanBo() {
-
+		System.out.println("1. Hien thi giang vien / 2. Hien thi nhan vien");
 		int choose = Integer.parseInt(sc.nextLine());
 		if (choose == 1) {
 			// hien thi giang vien
@@ -104,7 +104,7 @@ public class QuanLyCanBo {
 		}
 	}
 	public Person nhapThongTin() {
-		System.out.println("1. Giảng viên\n2. Nhân Viên");
+		System.out.println("1. Giảng viên / 2. Nhân Viên");
 		int chon = Integer.parseInt(sc.nextLine());
 		if (chon == 1) {
 			Teacher gv = new Teacher();
@@ -120,10 +120,10 @@ public class QuanLyCanBo {
 			gv.setTrinhDo(sc.nextLine());
 
 			System.out.println("Nhập số tiết dạy trong tháng");
-			gv.setSoTietDayTrongThang(sc.nextDouble());
+			gv.setSoTietDayTrongThang(Double.parseDouble(sc.nextLine()));
 
 			System.out.println("Nhập hệ số lương");
-			gv.setHeSoLuong(sc.nextDouble());
+			gv.setHeSoLuong(Double.parseDouble(sc.nextLine()));
 
 			persons.add(gv);
 
@@ -140,14 +140,13 @@ public class QuanLyCanBo {
 			hc.setPhongBan(sc.nextLine());
 
 			System.out.println("Nhập số ngày công");
-			hc.setSoNgayCong(sc.nextDouble());
+			hc.setSoNgayCong(Double.parseDouble(sc.nextLine()));
 
 			System.out.println("Nhập số tiết dạy trong tháng");
 			hc.setChucVu(sc.nextLine());
 
 			System.out.println("Nhập hệ số lương");
-			hc.setHeSoLuong(sc.nextDouble());
-
+			hc.setHeSoLuong(Double.parseDouble(sc.nextLine()));
 			persons.add(hc);
 
 		}
