@@ -5,6 +5,14 @@ public class NhanVienHanhChinh extends CanBo{
 	private int soNgayCong;
 	private int choose;
 	private String chucVu;
+		
+	public NhanVienHanhChinh(String hoTen, int phuCap, double heSoLuong, String phongBan, int soNgayCong,
+			String chucVu) {
+		super(hoTen, phuCap, heSoLuong);
+		this.phongBan = phongBan;
+		this.soNgayCong = soNgayCong;
+		this.chucVu = chucVu;
+	}
 	
 	public String getPhongBan() {
 		return phongBan;

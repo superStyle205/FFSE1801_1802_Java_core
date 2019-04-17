@@ -23,7 +23,7 @@ public class MyClass {
 			int choose = scanner.nextInt();
 			switch (choose) {
 			case 1:
-				addCanBo();
+				input();
 				break;
 				
 			case 2:
@@ -50,7 +50,7 @@ public class MyClass {
 		}
 	}
     
-	public void addCanBo() {
+	/*public void addCanBo() {
 		CanBo canBo = null;
 		int choose;
 	    System.out.print("Nhập số lượng cán bộ trong trường: ");
@@ -77,7 +77,7 @@ public class MyClass {
 	                }
 	        } while (choose < 1 || choose > 3);
 	    }
-	}
+	}*/
     
 	public void hienThiCanBo() {
 	    System.err.println("Hiển thị danh sách cán bộ trong trường: ");
@@ -118,6 +118,17 @@ public class MyClass {
 			cb.xuat();
 		}
 	}
+	
+	public void input() {
+		quanLyCanBo.add(new NhanVienHanhChinh("Long", 2000, 2.3, "IT", 8, "Trưởng phòng"));
+		quanLyCanBo.add(new GiangVien("Nam", 1000, 3.2, "Toán", "Tiến sĩ", 10));
+		quanLyCanBo.add(new NhanVienHanhChinh("a", 1000, 2, "IT", 5, "Phó phòng"));
+		quanLyCanBo.add(new GiangVien("b", 500, 1.2, "Hóa học", "Thạc sĩ", 5));
+		quanLyCanBo.add(new NhanVienHanhChinh("c", 1000, 1.2, "Lao công", 7, "Nhân viên"));
+		quanLyCanBo.add(new GiangVien("d", 300, 2, "Tin học", "Cử nhân", 3));
+		quanLyCanBo.add(new NhanVienHanhChinh("v", 1000, 2, "IT", 5, "Phó phòng"));
+	}
+	
 	public static void main(String[] args) {
 		MyClass myClass = new MyClass();
 		myClass.inMenu();

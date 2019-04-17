@@ -8,9 +8,6 @@ abstract public class CanBo {
 	private double heSoLuong;
 	Scanner scan = new Scanner(System.in);
 	
-	public CanBo() {
-	}
-	
 	public CanBo(String hoTen, int phuCap, double heSoLuong) {
 		super();
 		this.hoTen = hoTen;

@@ -5,6 +5,13 @@ public class GiangVien extends CanBo{
 	private String trinhDo;
 	private int soTietDayTrongThang;
 	private int choose;
+		
+	public GiangVien(String hoTen, int phuCap, double heSoLuong, String khoa, String trinhDo, int soTietDayTrongThang) {
+		super(hoTen, phuCap, heSoLuong);
+		this.khoa = khoa;
+		this.trinhDo = trinhDo;
+		this.soTietDayTrongThang = soTietDayTrongThang;
+	}
 	
 	public String getKhoa() {
 		return khoa;
