@@ -60,12 +60,13 @@ public class GiangVien extends CanBo{
 	
 	@Override
 	public void xuat() {
-		System.err.println("~~~Giảng viên~~~");
+		System.err.println("~~~~~~~~Giảng viên~~~~~~~~");
 		super.xuat();
-		System.err.println("Khoa làm việc: " + khoa);
-		System.err.println("Trình độ: " + trinhDo);
-		System.err.println("Phụ cấp: " + getPhuCap());
-		System.err.println("Lương: " + getTinhLuong());
+		System.err.println("Khoa làm việc\t\t: " + khoa);
+		System.err.println("Trình độ\t\t: " + trinhDo);
+		System.err.println("Số tiết dạy\t\t: " + soTietDayTrongThang);
+		System.err.println("Phụ cấp\t\t\t: " + getPhuCap());
+		System.err.println("Lương\t\t\t: " + getTinhLuong());
 	}
 	
 	@Override

@@ -60,13 +60,13 @@ public class NhanVienHanhChinh extends CanBo{
 	
 	@Override
 	public void xuat() {
-		System.err.println("~~~Nhân viên~~~");
+		System.err.println("~~~~~~~~Nhân viên~~~~~~~~");
 		super.xuat();
-		System.err.println("Phòng ban: " + phongBan);
-		System.err.println("Chức vụ: " + chucVu);
-		System.err.println("Số ngày công: " + soNgayCong);
-		System.err.println("Phụ cấp: " + getPhuCap());
-		System.err.println("Lương: " + getTinhLuong());
+		System.err.println("Phòng ban\t\t: " + phongBan);
+		System.err.println("Chức vụ\t\t\t: " + chucVu);
+		System.err.println("Số ngày công\t\t: " + soNgayCong);
+		System.err.println("Phụ cấp\t\t\t: " + getPhuCap());
+		System.err.println("Lương\t\t\t: " + getTinhLuong());
 	}
 	
 	@Override

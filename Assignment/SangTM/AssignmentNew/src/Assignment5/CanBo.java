@@ -54,7 +54,7 @@ abstract public class CanBo {
 	}
 	
 	public void xuat() {
-		System.err.println("Họ và tên: " + hoTen);
-		System.err.println("Hệ số lương: " + heSoLuong);
+		System.err.println("Họ và tên\t\t: " + hoTen);
+		System.err.println("Hệ số lương\t\t: " + heSoLuong);
 	}
 }

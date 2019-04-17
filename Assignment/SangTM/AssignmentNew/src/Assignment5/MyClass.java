@@ -14,13 +14,12 @@ public class MyClass {
 	
 	public void inMenu() {
 		while(true) {
-			System.err.println("Chọn chức năng[1_5]");
 			System.err.println("1. Nhập thông tin danh sách cán bộ trong trường.");
 			System.err.println("2. Xuất danh sách giảng viên khoa x, hoặc nhân viên phòng ban y nào đó.");
 			System.err.println("3. Tổng số lương trường phải trả cho cán bộ.");
 			System.err.println("4. Sắp xếp cán bộ theo lương, nếu lương bằng thì sắp xếp theo tên. ");		
 			System.err.println("5. Tạm biệt!!!");
-			System.err.print("Mời chọn: ");
+			System.err.print("Mời chọn[1_5]: ");
 			int choose = scanner.nextInt();
 			switch (choose) {
 			case 1:
@@ -105,6 +104,12 @@ public class MyClass {
 					canBo = quanLyCanBo.get(j);
 					quanLyCanBo.set(j, quanLyCanBo.get(j + 1));
 					quanLyCanBo.set(j + 1, canBo);
+				} else if (quanLyCanBo.get(j).getTinhLuong() == quanLyCanBo.get(j + 1).getTinhLuong()) {
+					if (quanLyCanBo.get(j).getHoTen().compareTo(quanLyCanBo.get(j + 1).getHoTen()) > 0) {
+						canBo = quanLyCanBo.get(j);
+						quanLyCanBo.set(j, quanLyCanBo.get(j + 1));
+						quanLyCanBo.set(j + 1, canBo);
+					}
 				}
 			}
 		}
