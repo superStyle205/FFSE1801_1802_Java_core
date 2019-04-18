@@ -1,4 +1,4 @@
-package Lab4;
+package lab.unit4;
 
 public abstract class StudentFPT {
     private String name;

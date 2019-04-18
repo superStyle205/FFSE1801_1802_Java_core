@@ -1,4 +1,4 @@
-package Lab4;
+package lab.unit4;
 
 //import Lab4.StudentFPT;
 

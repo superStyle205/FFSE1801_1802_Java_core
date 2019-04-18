@@ -1,4 +1,4 @@
-package Lab4;
+package lab.unit4;
 
 public class StudentIT extends StudentFPT {
     private double diemJava;
