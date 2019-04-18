@@ -1,4 +1,4 @@
-package Assignment5;
+package Assignment6;
 
 public class NhanVienHanhChinh extends ConNguoi{
 
@@ -13,8 +13,8 @@ public class NhanVienHanhChinh extends ConNguoi{
 		}
 		
 
-		public NhanVienHanhChinh(String hoTen, double heSoLuong, String phongBan, int soNgayCong, String chucVu) {
-			super(hoTen, heSoLuong);
+		public NhanVienHanhChinh(String id,String hoTen, double heSoLuong, String phongBan, int soNgayCong, String chucVu) {
+			super(id,hoTen, heSoLuong);
 			this.phongBan = phongBan;
 			this.soNgayCong = soNgayCong;
 			this.chucVu = chucVu;

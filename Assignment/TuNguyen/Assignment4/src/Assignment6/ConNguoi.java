@@ -1,6 +1,8 @@
-package Assignment5;
+package Assignment6;
 
 public class ConNguoi {
+	
+	private String id;
 	
 	private String hoTen;
 	
@@ -19,7 +21,8 @@ public class ConNguoi {
 		
 	}
 	
-	public ConNguoi(String hoTen, double heSoLuong) {
+	public ConNguoi(String id ,String hoTen, double heSoLuong) {
+		this.id = id;
 		this.hoTen = hoTen;
 		this.heSoLuong = heSoLuong;
 		
@@ -45,10 +48,16 @@ public class ConNguoi {
 		this.heSoLuong = heSoLuong;
 	}
 
+	public String getId() {
+		return id;
+	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 	
 	public String toString() {
-		return " Họ tên: " + hoTen + "\n Hệ số lương: " + heSoLuong ;
+		return "ID: " + id + " Họ tên: " + hoTen + "\n Hệ số lương: " + heSoLuong ;
 	}
 }

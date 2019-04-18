@@ -19,77 +19,79 @@ public class QuanLySinhVien {
 					+ "/****************************************/");
 			int n = Integer.parseInt(scan.nextLine());
 			switch (n) {
-				case 1:
-					themSinhVien();
-					break;
-				case 2:
-					capNhat();
-					break;
-				case 3:
-					xoaSinhVien();
-					break;
-				case 4:
-					sapXepSV();
-					break;
-				case 5:
-					hienThiSinhVien();
-					break;
-				case 0:
-					System.err.println("THANKS");
-					System.exit(0);
-					break;
-		
-				default:
-					break;
+			case 1:
+				themSinhVien();
+				break;
+			case 2:
+				capNhat();
+				break;
+			case 3:
+				xoaSinhVien();
+				break;
+			case 4:
+				sapXepSV();
+				break;
+			case 5:
+				hienThiSinhVien();
+				break;
+			case 0:
+				System.err.println("THANKS");
+				System.exit(0);
+				break;
+
+			default:
+				break;
 			}
 		}
 	}
 
-	
+
 	////   --------- BAI 1 -------------- ////
-	
+
 	public void themSinhVien() throws Exception {
-		
-		SinhVien SV = new SinhVien();
-		
-		
-		try {
-		System.out.println("Nhap id");
-		SV.setId(Integer.parseInt(scan.nextLine()));
-		kiemTraID(SV.getId());
-		
-		System.out.println("Nhap name");
-		SV.setName(scan.nextLine());
-		kiemTra(SV);
-		
-		System.out.println("Nhap tuoi");
-		SV.setAge(Integer.parseInt(scan.nextLine()));
-		kiemTra(SV);
-		
-		System.out.println("Nhap adress");
-		SV.setAdress(scan.nextLine());
-		
-		System.out.println("Nhap gpa");
-		SV.setGPA(Double.parseDouble(scan.nextLine()));
-		kiemTra(SV);
-		
-		sv.add(SV);
-		} catch (NumberFormatException e) {
-			System.out.println("Loi~~~ ID rong...." + e);
-		} catch (Exception tuBuDit) {
-			System.out.println("Loi~~~ " + tuBuDit);
-		}
-	}
 
 	
+
+			SinhVien SV = new SinhVien();
+
+
+			try {
+				System.out.println("Nhap id");
+				SV.setId(Integer.parseInt(scan.nextLine()));
+				kiemTraID(SV.getId());
+
+				System.out.println("Nhap name");
+				SV.setName(scan.nextLine());
+				kiemTra(SV);
+
+				System.out.println("Nhap tuoi");
+				SV.setAge(Integer.parseInt(scan.nextLine()));
+				kiemTra(SV);
+
+				System.out.println("Nhap adress");
+				SV.setAdress(scan.nextLine());
+
+				System.out.println("Nhap gpa");
+				SV.setGPA(Double.parseDouble(scan.nextLine()));
+				kiemTra(SV);
+
+				sv.add(SV);
+			} catch (NumberFormatException e) {
+				System.out.println("Loi~~~ ID rong...." + e);
+			} catch (Exception e1) {
+				System.out.println("Loi~~~ " + e1);
+			}
+		}
+	
+
 
 	public static void kiemTra(SinhVien sv2) throws Exception{
-		
+
 		// kt ten
 		if (sv2.getTen().equals("")) {
 			throw new Exception("Khong duoc de khoang trang");
 		}
-		
+
 		// tuoi 
 		if (sv2.getTuoi() < 0 || sv2.getTuoi() > 100) {
 			throw new Exception("Khong duoc qua 100 va nho hon 0");
@@ -101,11 +103,11 @@ public class QuanLySinhVien {
 	}
 
 	public static void kiemTraID(int id) throws Exception{
-		
+
 		int xet = 0;
-		
+
 		for (int j = 0;j < sv.size(); j++) {
-			
+
 			if (sv.get(j).getId() == id) {
 				xet = 1;
 			} 
@@ -113,17 +115,17 @@ public class QuanLySinhVien {
 		if (xet == 1) {
 			throw new Exception("Khong de rong id");
 		}
-		
+
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	//// --------- BAI 2 ------------ ////
-	
-	
-	
+
+
+
 
 	public void hienThiSinhVien() {
 		for (int j = 0; j < sv.size(); j++) {
@@ -132,15 +134,15 @@ public class QuanLySinhVien {
 	}
 
 
-	
-	
+
+
 	//// ---------- BAI 3 ------------ ////
-	
-	
+
+
 	public void capNhat() {
 		System.out.println("moi nhap id sinh vien");
 		int id = Integer.parseInt(scan.nextLine());
-		
+
 		for (int i = 0; i < sv.size(); i++) {
 			if (id == sv.get(i).getId()) {
 				sv.get(i).toString();
@@ -149,14 +151,14 @@ public class QuanLySinhVien {
 			}
 		}
 	}
-	
-	
+
+
 	//// ----------- BAI 4 -------------- ////
-	
+
 	public void xoaSinhVien() {
 		System.out.println("Nhap id can xoa");
 		int id = Integer.parseInt(scan.nextLine());
-		
+
 		for (int i = 0; i < sv.size(); i++) {
 			if (sv.get(i).getId() == id) {
 				sv.remove(i);
@@ -164,11 +166,11 @@ public class QuanLySinhVien {
 			System.out.println(sv.get(i).toString());
 		}
 	}
-	
-	
+
+
 	//// ----------- BAI 5 --------------- ////
-	
-	
+
+
 	public void sapXepSV() {
 		Collections.sort(sv, new Comparator<SinhVien>() {
 			@Override 
