@@ -1,3 +1,5 @@
+package lab.unit2;
+
 import java.util.Scanner;
 
 public class Bai2 {

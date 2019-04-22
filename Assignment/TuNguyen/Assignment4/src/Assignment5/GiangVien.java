@@ -64,7 +64,7 @@ public class GiangVien extends ConNguoi{
 
 	
 
-	public double tongLuongGiangVien() {
+	public double getLuong() {
 		
 		return (getHeSoLuong() * 730) + getPhuCap() + (getSoTietDay() * 45);
 		
@@ -74,7 +74,7 @@ public class GiangVien extends ConNguoi{
 	public String toString() {
 		
 		return super.toString() + "\n Khoa: " + khoa + "\n Trình độ: " + trinhDo + "\n Phụ cấp: " + getPhuCap()
-		+"\n Số tiết dạy: " + soTietDay + "\n TỔNG LƯƠNG: " + tongLuongGiangVien();
+		+"\n Số tiết dạy: " + soTietDay + "\n TONG LUONG: " + getLuong();
 	}
 	
 	

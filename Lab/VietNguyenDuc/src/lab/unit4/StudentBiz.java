@@ -1,4 +1,4 @@
-package Lab4;
+package lab.unit4;
 
 public class StudentBiz extends StudentFPT {
     private double diemMarketing;

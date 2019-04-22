@@ -16,36 +16,27 @@ public class QLHS {
 		BenhNhan bn = new BenhNhan();
 		
 		System.out.println("Nhap ten:");
-		String ten = scan.nextLine();
+		bn.setTen(scan.nextLine());
 		System.out.println("Nhap tuoi:");
-		int tuoi = Integer.parseInt(scan.nextLine());
+		bn.setTuoi(Integer.parseInt(scan.nextLine()));
 		System.out.println("Nhap Gioi tinh:");
-		String gt = scan.nextLine();
+		bn.setGioiTinh(scan.nextLine());
 		System.out.println("Nhap so cmnd:");
-		int cmnd = Integer.parseInt(scan.nextLine());
+		bn.setCmnd(Integer.parseInt(scan.nextLine()));
 		System.out.println("Ma benh nhan:");
-		String maBN = scan.nextLine();
+		bn.setMaBenhNhan(scan.nextLine());
 		System.out.println("Benh:");
-		String benh = scan.nextLine();
+		bn.setBenh(scan.nextLine());
 		System.out.println("Phuong phap chua benh:");
-		String pp = scan.nextLine();
+		bn.setPhuongPhapChuaBenh(scan.nextLine());
 		System.out.println("Ngay nhap vien:");
-		String ngayNhapVien = scan.nextLine();
+		bn.setNgayNhapvien(scan.nextLine());
 		System.out.println("Ngay ra vien:");
-		String ngayRaVien = scan.nextLine();
+		bn.setNgayRaVien(scan.nextLine());
 		System.out.println("Tien thanh toan:");
-		double tienThanhToan = Double.parseDouble(scan.nextLine());
+		bn.setTienThanhToan(Double.parseDouble(scan.nextLine()));
 		
-		bn.setTen(ten);
-		bn.setTuoi(tuoi);
-		bn.setGioiTinh(gt);
-		bn.setCmnd(cmnd);
-		bn.setMaBenhNhan(maBN);
-		bn.setBenh(benh);
-		bn.setPhuongPhapChuaBenh(pp);
-		bn.setNgayNhapvien(ngayNhapVien);
-		bn.setNgayRaVien(ngayRaVien);
-		bn.setTienThanhToan(tienThanhToan);
+		
 		benhNhan.add(bn);
 	}
 	
@@ -85,22 +76,6 @@ public class QLHS {
 	// 5.Tim benh nhan co tien tra nhieu nhat:
 	
 	public void tienBenhNhanNhieuNhat() {
-
-		
-		/*ArrayList<String> s = new ArrayList<>();
-		s.add("1");
-		s.add("2");
-		s.add("3");
-		s.add("4");
-		s.add("5");
-		s.add("6");
-		int max = Integer.parseInt(s.get(0));
-		for (int i = 1; i < s.size(); i++) {
-			if(Integer.parseInt(s.get(i)) > max) {
-				max = Integer.parseInt(s.get(i));
-			}
-		}
-		System.out.println(max);*/
 		
 		double max = benhNhan.get(0).getTienThanhToan();
 		int ii = 0;

@@ -6,6 +6,14 @@ public class ConNguoi {
 	
 	private double heSoLuong;
 	
+	public double getLuong() {
+		return 0;
+	}
+	
+	public double getPhuCap() {
+		return 0;
+	}
+	
 	
 	public ConNguoi() {
 		

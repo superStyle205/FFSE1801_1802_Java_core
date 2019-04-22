@@ -62,7 +62,7 @@ public class NhanVienHanhChinh extends ConNguoi{
 			return 0;
 		}
 		
-		public double tongLuongNV() {
+		public double getLuong() {
 			return (getHeSoLuong() * 730) +  getPhuCap() + (getSoNgayCong() * 30);
 		}
 		
@@ -70,6 +70,6 @@ public class NhanVienHanhChinh extends ConNguoi{
 		public String toString() {
 			
 			return super.toString() + "\n Phòng ban: " + phongBan + "\n Phụ cấp: " + getPhuCap() + "\n Số ngày công: " + soNgayCong + "\n Chức vụ: " + chucVu
-					+ "\n TỔNG LƯƠNG: " + tongLuongNV();
+					+ "\n TỔNG LƯƠNG: " + getLuong();
 		}
 }
