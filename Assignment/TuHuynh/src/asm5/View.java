@@ -84,7 +84,7 @@ public class View {
 					CanBo tg = cb.getAll().get(i);
 					cb.getAll().set(i, cb.getAll().get(j));
 					cb.getAll().set(j, tg);
-				} else if (!(uniCode.compare(cb.getAll().get(i).getHoTen(), cb.getAll().get(j).getHoTen()))) {
+				} else if (cb.getAll().get(i).tinhLuong() == cb.getAll().get(j).tinhLuong() && !(uniCode.compare(cb.getAll().get(i).getHoTen(), cb.getAll().get(j).getHoTen()))) {
 					CanBo tg = cb.getAll().get(i);
 					cb.getAll().set(i, cb.getAll().get(j));
 					cb.getAll().set(j, tg);
