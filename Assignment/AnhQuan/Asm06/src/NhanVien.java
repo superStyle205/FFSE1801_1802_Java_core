@@ -3,25 +3,15 @@ public class NhanVien {
 String hoTen;
 String phongBan;
 String chucVu;
-double luong;
+
 int soNgayCong;
 double heSoLuong;
 int phuCap;
+double luong;
 public NhanVien() {
 	
 }
-public NhanVien(String hoTen, String phongBan, String chucVu, double luong, int soNgayCong, double heSoLuong,
-		int phuCap) {
-	super();
-	this.hoTen = hoTen;
-	this.phongBan = phongBan;
-	this.chucVu = chucVu;
-	this.luong = luong;
-	this.soNgayCong = soNgayCong;
-	this.heSoLuong = heSoLuong;
-	this.phuCap = phuCap;
-}
-public NhanVien(String hoTen, String phongBan, String chucVu, int soNgayCong, double heSoLuong, int phuCap) {
+public NhanVien(String hoTen, String phongBan, String chucVu, int soNgayCong, double heSoLuong, int phuCap,double luong) {
 	
 	this.hoTen = hoTen;
 	this.phongBan = phongBan;
@@ -29,15 +19,16 @@ public NhanVien(String hoTen, String phongBan, String chucVu, int soNgayCong, do
 	this.soNgayCong = soNgayCong;
 	this.heSoLuong = heSoLuong;
 	this.phuCap = phuCap;
+	this.luong = luong;
+}
+public String getHoTen() {
+	return hoTen;
 }
 public double getLuong() {
 	return luong;
 }
 public void setLuong(double luong) {
 	this.luong = luong;
-}
-public String getHoTen() {
-	return hoTen;
 }
 public void setHoTen(String hoTen) {
 	this.hoTen = hoTen;

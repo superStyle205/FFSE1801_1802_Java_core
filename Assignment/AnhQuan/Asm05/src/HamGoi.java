@@ -25,9 +25,9 @@ public class HamGoi {
 		case 4:
 			tongLuong();
 			break;
-//		case 5:
-//			sapXepCanBo();
-//			break;
+		case 5:
+			sapXepCanBo();
+			break;
 	
 		}
 	}}
@@ -83,7 +83,7 @@ System.out.println("nhap chuc vu");
 	
 	a= sc.nextLine();
 	nvx.setChucVu(a);
-switch(nvx.getPhongBan()) {
+switch(nvx.getChucVu()) {
 case "truong phong" :
 	nvx.setPhuCap(2000);
 	break;
@@ -117,6 +117,23 @@ System.out.print("nhap so ngay cong");
 		}
 		System.out.println("Tong luong la"+ luong);
 	}
+
+
+	public void sapXepCanBo() {
+
+	gv.sort(new Comparator<GiangVien>() {
+		@Override
+		public int compare(GiangVien o1, GiangVien o2) {
+			if (o1.getLuong() == o2.getLuong()) {
+				return o1.getHoTen().compareTo(o2.getHoTen());
+			}
+			return o1.getLuong() > o2.getLuong() ? 1 : -1;
+		}
+
+	
+	});
+	}
+
 	public void xuatDanhSach() {
 		System.out.println("danh sach giang vien");
 		for(int i=0; i<gv.size();i++){
