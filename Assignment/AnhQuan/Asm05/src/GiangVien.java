@@ -6,6 +6,23 @@ String trinhDo;
 int phuCap;
 int soTietDay;
 double heSoLuong;
+double luong;
+public double getLuong() {
+	return luong;
+}
+public GiangVien(String hoTen, String khoa, String trinhDo, int phuCap, int soTietDay, double heSoLuong, double luong) {
+	super();
+	this.hoTen = hoTen;
+	this.khoa = khoa;
+	this.trinhDo = trinhDo;
+	this.phuCap = phuCap;
+	this.soTietDay = soTietDay;
+	this.heSoLuong = heSoLuong;
+	this.luong = luong;
+}
+public void setLuong(double luong) {
+	this.luong = luong;
+}
 public GiangVien() {
 	
 }
