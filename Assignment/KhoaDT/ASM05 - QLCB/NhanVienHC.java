@@ -41,7 +41,6 @@ public class NhanVienHC extends NhanVien {
     public NhanVienHC(String name, double salaryRate, String department, String pos, int workDays) {
         super.setName(name);
         super.setSalaryRate(salaryRate);
-        this.department = department;
         this.pos = pos;
         if (pos.equals("1")){
             super.setBonus(2000);
@@ -50,6 +49,7 @@ public class NhanVienHC extends NhanVien {
         } else if (pos.equals("3")){
             super.setBonus(500);
         }
+		super.setDepartment(department);
         this.workDays = workDays;
         super.setSalary(this.getSalaryRate()*730 + this.getBonus() + workDays*30);
     }
