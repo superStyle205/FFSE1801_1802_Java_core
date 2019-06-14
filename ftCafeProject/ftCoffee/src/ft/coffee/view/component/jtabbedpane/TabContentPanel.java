@@ -3,6 +3,8 @@ package ft.coffee.view.component.jtabbedpane;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,21 +25,21 @@ public class TabContentPanel extends JTabbedPane {
 		listTabName = new ArrayList<String>();
 	}
 
-	private boolean checkTabExist(String title) {
-		boolean flgExist = false;
+	private int getIndexTabByTitle(String title) {
+		int index = -1;
 		for (int i = 0; i < listTabName.size(); i++) {
 			if (listTabName.get(i).equals(title)) {
-				flgExist = true;
+				index = i;
 				break;
 			}
 		}
-
-		return flgExist;
+		return index;
 	}
 
 	@Override
 	public void addTab(String title, Component component) {
-		if (!checkTabExist(title)) {
+		int index = getIndexTabByTitle(title);
+		if (index == -1) {
 			super.addTab(title, component);
 			listTabName.add(title);
 			if (listTabName.size() != 1) {
@@ -45,25 +47,11 @@ public class TabContentPanel extends JTabbedPane {
 			}
 			setSelectedIndex(listTabName.size() - 1);
 		} else {
-			int index = -1;
-			for (int i = 0; i < listTabName.size(); i++) {
-				if (listTabName.get(i).equals(title)) {
-					index = i;
-					break;
-				}
-			}
-
-			if (index != -1) {
-				setSelectedIndex(index);
-			}
+			setSelectedIndex(index);
 		}
 	}
 
-	public void removeTab(String title) {
-		// TODO dung de remove tab voi title name tuong ung
-	}
-
-	private class CustomTab extends JPanel {
+	private class CustomTab extends JPanel implements ActionListener {
 
 		private static final long serialVersionUID = 1L;
 
@@ -76,11 +64,21 @@ public class TabContentPanel extends JTabbedPane {
 
 			lblTitleTab = new JLabel(title);
 			btnCloseTab = new JButton(new ImageIcon("image/close.png"));
-			btnCloseTab.setPreferredSize(new Dimension(15, 15));
+			btnCloseTab.setPreferredSize(new Dimension(13, 13));
 			btnCloseTab.setOpaque(false);
+			btnCloseTab.setContentAreaFilled(false);
+			btnCloseTab.setBorderPainted(false);
+			btnCloseTab.addActionListener(this);
 
 			add(lblTitleTab);
 			add(btnCloseTab);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			int index = getIndexTabByTitle(lblTitleTab.getText());
+			TabContentPanel.this.remove(index);
+			listTabName.remove(index);
 		}
 	}
 }
