@@ -64,7 +64,7 @@ public class TabContentPanel extends JTabbedPane {
 
 			lblTitleTab = new JLabel(title);
 			btnCloseTab = new JButton(new ImageIcon("image/close.png"));
-			btnCloseTab.setPreferredSize(new Dimension(13, 13));
+			btnCloseTab.setPreferredSize(new Dimension(10, 10));
 			btnCloseTab.setOpaque(false);
 			btnCloseTab.setContentAreaFilled(false);
 			btnCloseTab.setBorderPainted(false);

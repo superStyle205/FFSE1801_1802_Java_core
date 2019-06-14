@@ -6,12 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import ft.coffee.view.component.jtabbedpane.TabContentPanel;
 import ft.coffee.view.component.panel.FooterPanel;
 import ft.coffee.view.component.panel.HeaderPanel;
 import ft.coffee.view.component.panel.ThuNganContentPanel;
+import ft.coffee.view.component.panel.ToolHeThongPanel;
 
 public class MainFrame extends JFrame {
 
@@ -56,7 +56,7 @@ public class MainFrame extends JFrame {
 			if (action == header.getCardHeThong().getBtnDanhMuc()) {
 				System.out.println("button danh muc");
 			} else if (action == header.getCardHeThong().getBtnSanPham()) {
-				contentPanel.add("Sản phẩm", new JPanel());
+				contentPanel.add("Sản phẩm", new ToolHeThongPanel());
 			} else if (action == header.getCardHeThong().getBtnMatKhau()) {
 				ChangePasswordFrame changePasswordFrame = new ChangePasswordFrame(MainFrame.this);
 				changePasswordFrame.setVisible(true);
