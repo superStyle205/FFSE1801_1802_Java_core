@@ -1,12 +1,13 @@
 package ft.coffee.view.component.panel;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 
-public class ThuNganContentPanel extends JSplitPane {
+public class SanPhamTabContentPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
@@ -14,9 +15,10 @@ public class ThuNganContentPanel extends JSplitPane {
 	private JPanel leftContainer;
 	private JScrollPane rightScrollContainer;
 	private JPanel rightContainer;
+	private JSplitPane contentSplitPanel;
 
-	public ThuNganContentPanel() {
-		setBackground(Color.WHITE);
+	public SanPhamTabContentPanel() {
+		setLayout(new BorderLayout());
 		leftContainer = new JPanel();
 		leftScrollContainer = new JScrollPane(leftContainer, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -24,11 +26,14 @@ public class ThuNganContentPanel extends JSplitPane {
 		rightScrollContainer = new JScrollPane(rightContainer, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
-		setOrientation(JSplitPane.HORIZONTAL_SPLIT);
-		setLeftComponent(leftScrollContainer);
-		setRightComponent(rightScrollContainer);
-		setOneTouchExpandable(true);
-		setDividerLocation(250);
+		contentSplitPanel = new JSplitPane();
+		contentSplitPanel.setBackground(Color.WHITE);
+		contentSplitPanel.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
+		contentSplitPanel.setLeftComponent(leftScrollContainer);
+		contentSplitPanel.setRightComponent(rightScrollContainer);
+		contentSplitPanel.setOneTouchExpandable(true);
+		contentSplitPanel.setDividerLocation(250);
 
+		add(contentSplitPanel, BorderLayout.CENTER);
 	}
 }
